@@ -13,7 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   margin: 0;
   display: flex;
@@ -26,11 +25,12 @@ body {
   width: 100vw;
 }
 
-.game-btn{
+.game-btn {
   position: relative;
-  top: 530px;
+  top: 470px;
   left: 500px;
   background: rgb(123, 123, 160);
-  padding: 20px;
+  padding: 4rem;
   border-radius: 5px;
+  background-color: transparent;
 }
