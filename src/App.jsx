@@ -5,7 +5,6 @@ import { useState } from 'react'
 import Loading from './pages/Loading'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Map from './pages/Map'
-import './App.css'
 
 function App() {
   return (
