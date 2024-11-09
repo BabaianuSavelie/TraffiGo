@@ -43,6 +43,30 @@ export default function Game() {
         </Suspense>
         <OrbitControls />
       </Canvas>
+
+      <div className="overlay">
+        <div className="quizz">
+          <h1 className="question">
+            Cum ar trebui să traversezi corect strada pentru a fi în siguranță?
+          </h1>
+          <div className="quizz-container">
+            <div className="option">
+              Să te uiți în stânga și în dreapta, apoi să traversezi pe trecerea
+              de pietoni.
+            </div>
+            <div className="option">
+              Să alergi repede înainte, fără să te uiți.
+            </div>
+            <div className="option">
+              Să traversezi doar dacă vezi că alți oameni traversează.
+            </div>
+            <div className="option">
+              Să traversezi doar când nu vezi nicio mașină, chiar dacă nu e
+              trecere de pietoni.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
