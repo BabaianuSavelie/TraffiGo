@@ -1,22 +1,21 @@
 import "./App.css";
-import Game from "./pages/Game";
-import { useState } from 'react'
-// import Home from './pages/Home'
+import { useState, Suspense } from 'react'
 import Loading from './pages/Loading'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Map from './pages/Map'
+import Map from './pages/Map';
+import Game from "./pages/Game";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Loading/>}/>
-        <Route path="/map" element={<Map/>}/>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Loading/>}/>
+            <Route path="/map" element={<Map/>}/>
+            <Route path="/game" element={<Game/>}/>
+          </Routes>
+        </Suspense>
     </Router>
-    // <>
-    //   <Loading />
-    // </>
   );
 }
 
