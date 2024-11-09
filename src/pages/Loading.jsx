@@ -1,6 +1,12 @@
 import hero from '../assets/heroo.png';
+import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 export default function Home() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/map');
+  };
     return (
       <div className="container p-3 min-h-screen min-w-screen flex items-center justify-center bg-gray-100">
         <div className="flex w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
@@ -15,7 +21,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-center text-blue-600">TraffiGo</h1>
             <p className="text-center text-gray-600">Împreună pentru o societate mai sigură.</p>
             
-            <form className="space-y-4">
+            <form className="space-y-4" method="POST">
               <div>
                 <label htmlFor="fullname" className="block text-sm font-medium text-gray-700">Nume Prenume</label>
                 <input
@@ -71,7 +77,7 @@ export default function Home() {
               </div>
   
               <button
-                type="submit"
+                type="submit" onClick={handleClick}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Autentificare
