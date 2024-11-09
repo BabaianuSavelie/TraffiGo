@@ -25,3 +25,12 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+.game-btn{
+  position: relative;
+  top: 530px;
+  left: 500px;
+  background: rgb(123, 123, 160);
+  padding: 20px;
+  border-radius: 5px;
+}
